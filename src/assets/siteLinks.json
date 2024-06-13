@@ -33,5 +33,10 @@
     "icon": "ServerProxy",
     "name": "Github Proxy",
     "link": "https://gh-proxy.wanlu.fun"
+  },
+  {
+    "icon": "LaptopCode",
+    "name": "Website Status",
+    "link": "https://status.wanlu.fun"
   }
 ]

@@ -43,7 +43,7 @@
 <script setup>
 import { Icon } from "@vicons/utils";
 // 可前往 https://www.xicons.org 自行挑选并在此处引入
-import { Link, Blog, Rss, Linux, Database } from "@vicons/fa"; // 注意使用正确的类别
+import { Link, Blog, Rss, Linux, Database, LaptopCode } from "@vicons/fa"; // 注意使用正确的类别
 import { Password, ServerProxy } from "@vicons/carbon";
 import { BrandBing } from "@vicons/tabler";
 import { mainStore } from "@/store";
@@ -71,7 +71,8 @@ const siteIcon = {
   Database,
   Password,
   BrandBing,
-  ServerProxy
+  ServerProxy,
+  LaptopCode
 };
 
 // 链接跳转
