@@ -19,7 +19,7 @@
     </Transition>
     <!-- 一言内容 -->
     <Transition name="el-fade-in-linear" mode="out-in">
-      <div :key="hitokotoData.text" class="content" @click="updateHitokoto">
+      <div :key="hitokotoData.text" class="content">
         <span class="text">{{ hitokotoData.text }}</span>
         <span class="from">-「&nbsp;{{ hitokotoData.from }}&nbsp;」</span>
       </div>
@@ -28,10 +28,8 @@
 </template>
 
 <script setup>
-import { MusicMenu, Error } from "@icon-park/vue-next";
-import { getHitokoto } from "@/api";
+import { MusicMenu } from "@icon-park/vue-next";
 import { mainStore } from "@/store";
-import debounce from "@/utils/debounce.js";
 
 const store = mainStore();
 
@@ -40,39 +38,8 @@ const openMusicShow = ref(false);
 
 // 一言数据
 const hitokotoData = reactive({
-  text: "这里应该显示一句话",
-  from: "無名",
-});
-
-// 获取一言数据
-const getHitokotoData = async () => {
-  try {
-    const result = await getHitokoto();
-    hitokotoData.text = result.hitokoto;
-    hitokotoData.from = result.from;
-  } catch (error) {
-    ElMessage({
-      message: "一言获取失败",
-      icon: h(Error, {
-        theme: "filled",
-        fill: "#efefef",
-      }),
-    });
-    hitokotoData.text = "这里应该显示一句话";
-    hitokotoData.from = "無名";
-  }
-};
-
-// 更新一言数据
-const updateHitokoto = () => {
-  // 防抖
-  debounce(() => {
-    getHitokotoData();
-  }, 500);
-};
-
-onMounted(() => {
-  getHitokotoData();
+  text: "Quietly come, Quietly go, Quietly strive, Quietly reap.",
+  from: "Lu Wan",
 });
 </script>
 

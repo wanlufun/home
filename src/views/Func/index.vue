@@ -4,7 +4,7 @@
     <el-row :gutter="20">
       <el-col :span="12">
         <div class="left">
-          <Shanbay />
+          <Hitokoto />
           <Music v-if="playerHasId" />
         </div>
       </el-col>
@@ -32,8 +32,7 @@
 import { getCurrentTime } from "@/utils/getTime";
 import { mainStore } from "@/store";
 import Music from "@/components/Music.vue";
-import Hitokoto from "@/components/Hitokoto.vue";
-import Shanbay from "@/components/Shanbay.vue"
+import Hitokoto from "@/components/Hitokoto.vue"
 import Weather from "@/components/Weather.vue";
 
 const store = mainStore();
