@@ -1,22 +1,8 @@
 <template>
   <div
     class="hitokoto cards"
-    v-show="!store.musicOpenState"
-    @mouseenter="openMusicShow = true"
-    @mouseleave="openMusicShow = false"
     @click.stop
   >
-    <!-- 打开音乐面板 -->
-    <Transition name="el-fade-in-linear">
-      <div
-        class="open-music"
-        v-show="openMusicShow && store.musicIsOk"
-        @click="store.musicOpenState = true"
-      >
-        <music-menu theme="filled" size="18" fill="#efefef" />
-        <span>打开音乐播放器</span>
-      </div>
-    </Transition>
     <!-- 一言内容 -->
     <Transition name="el-fade-in-linear" mode="out-in">
       <div :key="hitokotoData.text" class="content">
@@ -28,14 +14,6 @@
 </template>
 
 <script setup>
-import { MusicMenu } from "@icon-park/vue-next";
-import { mainStore } from "@/store";
-
-const store = mainStore();
-
-// 开启音乐面板按钮显隐
-const openMusicShow = ref(false);
-
 // 一言数据
 const hitokotoData = reactive({
   text: "Quietly come, Quietly go, Quietly strive, Quietly reap.",
