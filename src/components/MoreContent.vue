@@ -1,5 +1,5 @@
 <template>
-  <div class="more-content">您可在此编写任意内容</div>
+  <div class="more-content">I'm Lu Wan, a Fullstack developer.</div>
 </template>
 
 <style lang="scss" scoped>
