@@ -20,6 +20,11 @@
     "link": "https://drawdb.wanlu.fun"
   },
   {
+    "icon": "Cloud",
+    "name": "Cloudreve",
+    "link": "https://cloud.wanlu.fun"
+  },
+  {
     "icon": "Password",
     "name": "Bitwarden",
     "link": "https://bitwarden.wanlu.fun"
